@@ -1,23 +1,33 @@
-# pyflologic
+# pyflologic-unofficial
 
 Async Python client for [FloLogic](https://flologic.com/) Connect leak-detection
-shutoff valves.
+shutoff valves, over the protocol the mobile app uses.
 
-FloLogic publishes no API. This library speaks the same SignalR protocol the
-mobile app uses, reverse-engineered from its traffic. It is not affiliated with
-or endorsed by FloLogic, and a server-side change could break it at any time.
+FloLogic now has an official Web API, and
+[`pyflologic`](https://github.com/pfeffed/pyflologic) is the client for it. Use
+that one when it covers what you need. This library came first and still
+reaches far more of the device: the official API reads about forty percent of
+the fields this one does and writes two settings of the twenty. It speaks the
+SignalR protocol of the mobile app, reverse-engineered from its traffic, is
+not affiliated with or endorsed by FloLogic, and a server-side change could
+break it at any time.
+
+Until 0.5.0 this package was itself called `pyflologic`; the name moved to the
+official-API client.
 
 ## Why this exists
 
 Every FloLogic integration I could find assumes one valve per account. Real
 accounts routinely have several — plus a G-Connect gateway sitting in the same
-device list — so `pyflologic` is account-scoped: it loads *all* your valves and
-takes a valve ID on every command.
+device list — so `pyflologic-unofficial` is account-scoped: it loads *all* your
+valves and takes a valve ID on every command.
 
 ## Install
 
+Not published to PyPI. Install from the repository:
+
 ```bash
-pip install pyflologic
+pip install git+https://github.com/pfeffed/pyflologic-unofficial
 ```
 
 Requires Python 3.11+. The only runtime dependency is `aiohttp`.
@@ -27,7 +37,7 @@ Requires Python 3.11+. The only runtime dependency is `aiohttp`.
 ```python
 import asyncio
 
-from pyflologic import ControlMode, DeviceIdentity, FloLogicClient
+from pyflologic_unofficial import ControlMode, DeviceIdentity, FloLogicClient
 
 
 async def main() -> None:
@@ -97,7 +107,7 @@ FloLogic packs both the current mode and every active condition into one
 integer, so `mode` is an `IntFlag`:
 
 ```python
-from pyflologic import ValveMode
+from pyflologic_unofficial import ValveMode
 
 if valve.mode & ValveMode.SENSOR_LEAK:
     print("leak sensor tripped")

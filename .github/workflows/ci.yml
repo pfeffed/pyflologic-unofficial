@@ -29,4 +29,4 @@ jobs:
       - name: Type check
         run: uv run mypy
       - name: Test
-        run: uv run pytest --cov=pyflologic --cov-report=term-missing
+        run: uv run pytest --cov=pyflologic_unofficial --cov-report=term-missing

@@ -8,7 +8,7 @@ import aiohttp
 import pytest
 from aiohttp.test_utils import TestServer
 
-from pyflologic import DeviceIdentity, FloLogicClient
+from pyflologic_unofficial import DeviceIdentity, FloLogicClient
 
 from .fake_hub import FakeHub
 

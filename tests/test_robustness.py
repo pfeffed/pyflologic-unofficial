@@ -12,7 +12,7 @@ from collections.abc import Callable
 
 import pytest
 
-from pyflologic import (
+from pyflologic_unofficial import (
     Account,
     ControlMode,
     FloLogicClient,
@@ -20,7 +20,7 @@ from pyflologic import (
     FloLogicError,
     ValveMode,
 )
-from pyflologic import client as client_module
+from pyflologic_unofficial import client as client_module
 
 from .fake_hub import FakeHub, make_valve
 

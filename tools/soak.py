@@ -21,7 +21,7 @@ from datetime import UTC, datetime
 
 from accounts import CredentialError, resolve
 
-from pyflologic import Account, FloLogicClient, FloLogicError
+from pyflologic_unofficial import Account, FloLogicClient, FloLogicError
 
 
 class Soak:

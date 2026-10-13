@@ -6,7 +6,7 @@ from datetime import UTC, datetime, timedelta
 
 import pytest
 
-from pyflologic import (
+from pyflologic_unofficial import (
     CRITICAL_FLAGS,
     WARNING_FLAGS,
     WATER_OFF_FLAGS,

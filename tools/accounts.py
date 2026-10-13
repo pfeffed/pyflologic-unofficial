@@ -16,7 +16,7 @@ import os
 from dataclasses import dataclass
 from pathlib import Path
 
-from pyflologic import DeviceIdentity
+from pyflologic_unofficial import DeviceIdentity
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 ENV_PATH = REPO_ROOT / ".env"

@@ -25,7 +25,7 @@ from typing import Any
 
 from accounts import CredentialError, resolve
 
-from pyflologic import FloLogicClient, FloLogicError
+from pyflologic_unofficial import FloLogicClient, FloLogicError
 
 
 def summarize(valve: Any) -> str:

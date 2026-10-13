@@ -31,7 +31,7 @@ from typing import Any
 
 from accounts import CredentialError, resolve
 
-from pyflologic import Account, ControlMode, FloLogicClient, FloLogicError
+from pyflologic_unofficial import Account, ControlMode, FloLogicClient, FloLogicError
 
 RESTORE_ATTEMPTS = 3
 POLL_SECONDS = 5.0

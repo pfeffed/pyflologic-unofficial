@@ -3,8 +3,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "pyflologic"
-version = "0.4.1"
+name = "pyflologic-unofficial"
+version = "0.5.0"
 description = "Async client for the FloLogic Connect leak-detection valve cloud service"
 readme = "README.md"
 license = { text = "MIT" }
@@ -25,8 +25,8 @@ classifiers = [
 dependencies = ["aiohttp>=3.9"]
 
 [project.urls]
-Homepage = "https://github.com/dpfeffer/pyflologic"
-Issues = "https://github.com/dpfeffer/pyflologic/issues"
+Homepage = "https://github.com/pfeffed/pyflologic-unofficial"
+Issues = "https://github.com/pfeffed/pyflologic-unofficial/issues"
 
 [dependency-groups]
 dev = [
@@ -38,7 +38,7 @@ dev = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/pyflologic"]
+packages = ["src/pyflologic_unofficial"]
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
@@ -71,10 +71,10 @@ ignore = [
 "tools/*" = ["T201", "PLR2004", "PLR0911", "PLR0912", "PLR0915", "ASYNC240"]  # dev tooling: prints, branches, local I/O
 
 [tool.ruff.lint.isort]
-known-first-party = ["pyflologic"]
+known-first-party = ["pyflologic_unofficial"]
 
 [tool.mypy]
 python_version = "3.11"
 strict = true
 warn_unreachable = true
-files = ["src/pyflologic"]
+files = ["src/pyflologic_unofficial"]

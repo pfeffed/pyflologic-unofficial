@@ -25,7 +25,7 @@ from typing import Any
 
 from accounts import CredentialError, resolve
 
-from pyflologic import (
+from pyflologic_unofficial import (
     Account,
     FloLogicClient,
     FloLogicError,

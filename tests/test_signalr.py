@@ -9,14 +9,14 @@ from typing import Any
 import aiohttp
 import pytest
 
-from pyflologic.exceptions import (
+from pyflologic_unofficial.exceptions import (
     FloLogicAuthError,
     FloLogicCommandError,
     FloLogicConnectionError,
     FloLogicProtocolError,
     FloLogicTimeoutError,
 )
-from pyflologic.signalr import SignalRConnection
+from pyflologic_unofficial.signalr import SignalRConnection
 
 from .fake_hub import FakeHub
 
